@@ -34,3 +34,10 @@ override_rules:
     condition: "<"
     value: 0.30
     action: "prevent_stable_without_warning"
+
+l1_gate_thresholds:
+  redundancy_ratio: 0.85
+  mid_context_penalty: 50
+  stale_tool_drift: true
+  objective_recency_turns: 15
+  context_utilization_warning: 0.80

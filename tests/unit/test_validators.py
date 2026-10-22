@@ -11,7 +11,6 @@ def get_example_path(filename: str) -> str:
 def test_validate_healthy_conversation_input():
     with open(get_example_path("healthy-conversation.json"), "r") as f:
         data = json.load(f)
-    # Should not raise exception
     validate_input(data)
 
 def test_validate_ambiguous_task_input():
@@ -22,7 +21,6 @@ def test_validate_ambiguous_task_input():
 def test_validate_invalid_input():
     invalid_data = {
         "schema_version": "1.0.0"
-        # Missing required 'messages'
     }
     with pytest.raises(ValidationError):
         validate_input(invalid_data)
@@ -92,3 +90,65 @@ def test_validate_result_invalid_severity():
     }
     with pytest.raises(ValidationError):
         validate_result(invalid_result)
+
+def test_validate_result_with_l1_verdict_and_submetrics():
+    result_with_l1 = {
+        "schema_version": "1.0.0",
+        "audit_id": "audit-l1-001",
+        "overall_status": "stable",
+        "risk_score": 0.0,
+        "confidence": 0.85,
+        "evidence_coverage": 1.0,
+        "dimension_scores": {
+            "instruction_conflict": 0,
+            "task_ambiguity": 0,
+            "context_contamination": 0,
+            "evidence_quality": 0,
+            "state_integrity": 0,
+            "redundancy_pressure": 0,
+            "lexical_redundancy": 12,
+            "positional_decay": 0,
+            "prefix_volatility": 0
+        },
+        "findings": [],
+        "recommended_actions": [],
+        "triggered_rules": [],
+        "limitations": ["L1 fast gate evaluation"],
+        "l1_verdict": {
+            "route": "pass",
+            "l1_risk_score": 0.0,
+            "triggers": [],
+            "latency_ms": 1.45
+        }
+    }
+    validate_result(result_with_l1)
+
+def test_validate_result_with_null_optional_fields():
+    # When model_dump() serializes None fields as null
+    result_with_nulls = {
+        "schema_version": "1.0.0",
+        "audit_version": None,
+        "audit_id": "audit-null-002",
+        "overall_status": "moderate",
+        "risk_score": 35.0,
+        "confidence": 0.9,
+        "evidence_coverage": 1.0,
+        "scope": None,
+        "dimension_scores": {
+            "instruction_conflict": 25,
+            "task_ambiguity": 25,
+            "context_contamination": 0,
+            "evidence_quality": 0,
+            "state_integrity": 0,
+            "redundancy_pressure": 0,
+            "lexical_redundancy": None,
+            "positional_decay": None,
+            "prefix_volatility": None
+        },
+        "findings": [],
+        "recommended_actions": [],
+        "triggered_rules": [],
+        "limitations": [],
+        "l1_verdict": None
+    }
+    validate_result(result_with_nulls)

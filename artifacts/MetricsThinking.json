@@ -1,70 +1,74 @@
 {
-  "project_name": "Context Entropy Auditor (CEA)",
-  "project_path": "D:\\0001 HyperScale Thinking\\PROYECTOS CLOUD\\Research and Development\\Context Entropy Auditor (CEA)",
-  "audit_date": "2026-09-28 12:55:46",
+  "project_name": "CEA BRAIN",
+  "project_path": "D:\\0001 HyperScale Thinking\\PROYECTOS CLOUD\\Research and Development\\CEA BRAIN",
+  "audit_date": "2026-10-22 10:24:10",
   "auditor": "MetricsThinking™ Universal Auditor",
-  "profile_used": "C:\\Users\\Alvaro\\.gemini\\config\\skills\\metrics\\profiles\\llmops.yaml",
+  "profile_used": "llmops",
   "domain_archetype": "llmops",
   "inspection_mode": "pipeline_orchestration",
-  "git_commit": "ac6e62b",
+  "git_commit": "5e2758d",
   "git_branch": "master",
   "seed_detected": true,
-  "seed_version": null,
+  "seed_version": "3.0",
   "evidence_primitives": {
     "config": {
       "primitive_type": "config",
-      "file_count": 26,
-      "total_lines": 0,
+      "file_count": 39,
+      "total_lines": 3429,
       "sample_paths": [
-        "pyproject.toml",
+        ".agentignore",
+        ".github/workflows/ci.yml",
         "01_seed/.context.yaml",
         "02_foundation/engine/.context.yaml",
-        "03_research/experiments/.context.yaml",
-        "03_research/notebooks/.context.yaml"
+        "03_research/experiments/.context.yaml"
       ],
       "verified_valid": true
     },
     "spec": {
       "primitive_type": "spec",
-      "file_count": 3,
-      "total_lines": 0,
+      "file_count": 11,
+      "total_lines": 1121,
       "sample_paths": [
-        "01_seed/seed-context-entropy-auditor-master.md",
-        "schemas/audit-input.schema.json",
-        "schemas/audit-result.schema.json"
+        ".agentignore",
+        "01_seed/seed-cea-brain-master.md",
+        "03_research/prompts/.context.yaml",
+        "AGENTS.md",
+        "prompts/auditor-simple-en.md"
       ],
       "verified_valid": true
     },
     "pipeline": {
       "primitive_type": "pipeline",
-      "file_count": 0,
-      "total_lines": 0,
-      "sample_paths": [],
-      "verified_valid": false
+      "file_count": 1,
+      "total_lines": 38,
+      "sample_paths": [
+        ".github/workflows/ci.yml"
+      ],
+      "verified_valid": true
     },
     "verification": {
       "primitive_type": "verification",
-      "file_count": 9,
-      "total_lines": 0,
+      "file_count": 13,
+      "total_lines": 1450,
       "sample_paths": [
         "03_research/experiments/.context.yaml",
+        "artifacts/Fases/Inc6_Dataset_Evaluacion/ENTREGABLES.md",
+        "scripts/evaluate.py",
         "tests/e2e/test_cli.py",
-        "tests/unit/test_antigravity_adapter.py",
-        "tests/unit/test_interactive_session.py",
-        "tests/unit/test_normalizers.py"
+        "tests/unit/test_antigravity_adapter.py"
       ],
       "verified_valid": true
     },
     "implementation": {
       "primitive_type": "implementation",
-      "file_count": 20,
-      "total_lines": 0,
+      "file_count": 26,
+      "total_lines": 3132,
       "sample_paths": [
+        "01_seed/seed-cea-brain-master.md",
+        "02_foundation/engine/.context.yaml",
+        "02_foundation/engine/engine_readme.md",
         "03_research/prompts/.context.yaml",
-        "prompts/auditor-simple-en.md",
-        "prompts/auditor-simple-es.md",
-        "prompts/auditor-technical-en.md",
-        "prompts/auditor-technical-es.md"
+        "artifacts/Fases/Inc1_Prompt_Core/ENTREGABLES.md"
       ],
       "verified_valid": true
     }
@@ -80,24 +84,24 @@
           "criterion_id": "M01-C01",
           "name": "GenAI Problem Statement & Task Framing",
           "fulfilled": true,
-          "evidence_path": "01_seed/seed-context-entropy-auditor-master.md",
-          "evidence_detail": "Problem statement formalizado en '01_seed/seed-context-entropy-auditor-master.md'.",
+          "evidence_path": "01_seed/seed-cea-brain-master.md",
+          "evidence_detail": "Problem statement formalizado en '01_seed/seed-cea-brain-master.md'.",
           "remediation_hint": "Declarar formalmente la tarea de GenAI y objetivos en 01_seed o README.md."
         },
         {
           "criterion_id": "M01-C02",
           "name": "Límites de Contexto y Scope de Alucinación",
           "fulfilled": true,
-          "evidence_path": "01_seed/seed-context-entropy-auditor-master.md",
-          "evidence_detail": "Límites de alcance y fronteras del sistema identificados en '01_seed/seed-context-entropy-auditor-master.md'.",
+          "evidence_path": "01_seed/seed-cea-brain-master.md",
+          "evidence_detail": "Límites de alcance y fronteras del sistema identificados en '01_seed/seed-cea-brain-master.md'.",
           "remediation_hint": "Definir límites de autonomía y scope de herramientas en README o seed."
         },
         {
           "criterion_id": "M01-C03",
           "name": "User Personas y Flujos de Conversación",
           "fulfilled": true,
-          "evidence_path": "01_seed/seed-context-entropy-auditor-master.md",
-          "evidence_detail": "Perfiles de uso y casos definidos en '01_seed/seed-context-entropy-auditor-master.md'.",
+          "evidence_path": "01_seed/seed-cea-brain-master.md",
+          "evidence_detail": "Perfiles de uso y casos definidos en '01_seed/seed-cea-brain-master.md'.",
           "remediation_hint": "Documentar perfiles de usuario y flujos conversacionales esperados."
         }
       ],
@@ -115,16 +119,16 @@
           "criterion_id": "M02-C01",
           "name": "Context Engineering & Memory Architecture",
           "fulfilled": true,
-          "evidence_path": "src/context_auditor/auditor.py",
-          "evidence_detail": "Arquitectura de Context Engineering / Vectorstores identificada en 'src/context_auditor/auditor.py'.",
+          "evidence_path": "src/context_auditor/__init__.py",
+          "evidence_detail": "Arquitectura de Context Engineering / Vectorstores identificada en 'src/context_auditor/__init__.py'.",
           "remediation_hint": "Implementar módulos de context engineering o vectorstores en src/."
         },
         {
           "criterion_id": "M02-C02",
           "name": "ADRs de Selección de Modelos y Providers",
           "fulfilled": true,
-          "evidence_path": "artifacts/plans/active/INFERRED_ROADMAP.md",
-          "evidence_detail": "Registro formal de decisiones arquitectónicas (ADRs) documentado en 'artifacts/plans/active/INFERRED_ROADMAP.md'.",
+          "evidence_path": "01_seed/seed-cea-brain-master.md",
+          "evidence_detail": "Registro formal de decisiones arquitectónicas (ADRs) documentado en '01_seed/seed-cea-brain-master.md'.",
           "remediation_hint": "Documentar ADRs de providers de IA y estrategias de fallback en docs/."
         },
         {
@@ -158,8 +162,8 @@
           "criterion_id": "M03-C01",
           "name": "Filtros de PII y Sanitización de Prompts",
           "fulfilled": true,
-          "evidence_path": "01_seed/seed-context-entropy-auditor-master.md",
-          "evidence_detail": "Políticas de privacidad y clasificación PII documentadas en '01_seed/seed-context-entropy-auditor-master.md'.",
+          "evidence_path": "01_seed/seed-cea-brain-master.md",
+          "evidence_detail": "Políticas de privacidad y clasificación PII documentadas en '01_seed/seed-cea-brain-master.md'.",
           "remediation_hint": "Añadir sanitización de PII previa a llamadas a LLM."
         },
         {
@@ -175,7 +179,7 @@
           "name": "Validación de Structured Outputs",
           "fulfilled": true,
           "evidence_path": ".context/tree.json",
-          "evidence_detail": "Gobernanza contextual iDirectory activa con 25 archivos de contexto (.context.yaml).",
+          "evidence_detail": "Gobernanza contextual iDirectory activa con 22 archivos de contexto (.context.yaml).",
           "remediation_hint": "Implementar validación y reparación estricta de salidas estructuradas."
         }
       ],
@@ -209,8 +213,8 @@
           "criterion_id": "M04-C03",
           "name": "Golden Prompts & Fixtures de Evaluación",
           "fulfilled": true,
-          "evidence_path": "data/processed/.context.yaml",
-          "evidence_detail": "Fixtures y datos de prueba disponibles (2 archivos, e.g. 'data/processed/.context.yaml').",
+          "evidence_path": "src/data_generation/.context.yaml",
+          "evidence_detail": "Fixtures y datos de prueba disponibles (1 archivos, e.g. 'src/data_generation/.context.yaml').",
           "remediation_hint": "Proveer datasets de evaluación golden en tests/fixtures o data/."
         }
       ],
@@ -228,24 +232,24 @@
           "criterion_id": "M05-C01",
           "name": "Parsers de Ingesta y Fragmentación Documental",
           "fulfilled": true,
-          "evidence_path": "03_research/prompts/.context.yaml",
-          "evidence_detail": "Módulos de procesamiento e implementación activos (20 archivos, e.g. '03_research/prompts/.context.yaml').",
+          "evidence_path": "01_seed/seed-cea-brain-master.md",
+          "evidence_detail": "Módulos de procesamiento e implementación activos (26 archivos, e.g. '01_seed/seed-cea-brain-master.md').",
           "remediation_hint": "Implementar extractores de documentos y segmentación semántica en src/."
         },
         {
           "criterion_id": "M05-C02",
           "name": "Motor de Reranking y Búsqueda Híbrida",
           "fulfilled": true,
-          "evidence_path": "03_research/prompts/.context.yaml",
-          "evidence_detail": "Lógica nuclear de implementación presente en 20 módulos.",
+          "evidence_path": "01_seed/seed-cea-brain-master.md",
+          "evidence_detail": "Lógica nuclear de implementación presente en 26 módulos.",
           "remediation_hint": "Desarrollar motor de recuperación semántica o ejecución de agentes."
         },
         {
           "criterion_id": "M05-C03",
           "name": "Resolución de Tools y Multi-Agent Orchestration",
           "fulfilled": true,
-          "evidence_path": "src/context_auditor/auditor.py",
-          "evidence_detail": "Arquitectura modular interconectada (14 archivos fuente).",
+          "evidence_path": "src/context_auditor/__init__.py",
+          "evidence_detail": "Arquitectura modular interconectada (16 archivos fuente).",
           "remediation_hint": "Implementar orquestador de herramientas y coordinación agéntica."
         },
         {
@@ -271,16 +275,16 @@
           "criterion_id": "M06-C01",
           "name": "Adaptadores Multiprovider de LLMs",
           "fulfilled": true,
-          "evidence_path": "src/context_auditor/adapters/antigravity.py",
-          "evidence_detail": "Emisores y serializadores de destino verificados en 'src/context_auditor/adapters/antigravity.py'.",
+          "evidence_path": "src/context_auditor/adapters/__init__.py",
+          "evidence_detail": "Emisores y serializadores de destino verificados en 'src/context_auditor/adapters/__init__.py'.",
           "remediation_hint": "Añadir adaptadores modulares para múltiples providers de LLM."
         },
         {
           "criterion_id": "M06-C02",
           "name": "Streaming Seguro y Manejo Atómico de Respuestas",
-          "fulfilled": false,
-          "evidence_path": null,
-          "evidence_detail": "Falta estandarización de escritura atómica y safe-encoding UTF-8.",
+          "fulfilled": true,
+          "evidence_path": "src/context_auditor/adapters/antigravity.py",
+          "evidence_detail": "Manejo seguro de codificación UTF-8 / serialización protegida en 'src/context_auditor/adapters/antigravity.py'.",
           "remediation_hint": "Asegurar manejo robusto de streaming y persistencia de memoria."
         },
         {
@@ -292,9 +296,9 @@
           "remediation_hint": "Integrar exportación de trazas y telemetría de LLM."
         }
       ],
-      "phase_completion_pct": 66.67,
-      "weighted_contribution_pct": 10.0,
-      "status": "active"
+      "phase_completion_pct": 100.0,
+      "weighted_contribution_pct": 15.0,
+      "status": "done"
     },
     {
       "module_id": "M07",
@@ -375,9 +379,9 @@
         {
           "criterion_id": "M09-C01",
           "name": "Pipeline de CI con Puerta de Calidad Semántica",
-          "fulfilled": false,
-          "evidence_path": null,
-          "evidence_detail": "No se encontró pipeline de CI/CD automatizado (.github/workflows/).",
+          "fulfilled": true,
+          "evidence_path": ".github/workflows/ci.yml",
+          "evidence_detail": "Pipeline de integración continua automatizado verificado en '.github/workflows/ci.yml'.",
           "remediation_hint": "Integrar evaluación de prompts en pipeline de CI (.github/workflows)."
         },
         {
@@ -389,9 +393,9 @@
           "remediation_hint": "Configurar Dockerfile o pyproject.toml para empaquetado del servicio."
         }
       ],
-      "phase_completion_pct": 50.0,
-      "weighted_contribution_pct": 5.0,
-      "status": "active"
+      "phase_completion_pct": 100.0,
+      "weighted_contribution_pct": 10.0,
+      "status": "done"
     },
     {
       "module_id": "M10",
@@ -403,24 +407,24 @@
           "criterion_id": "M10-C01",
           "name": "ThinkingSeed GenAI & Topología Agéntica",
           "fulfilled": true,
-          "evidence_path": "01_seed/seed-context-entropy-auditor-master.md",
-          "evidence_detail": "Memoria técnica formal (ThinkingSeed) identificada en '01_seed/seed-context-entropy-auditor-master.md'.",
+          "evidence_path": "01_seed/seed-cea-brain-master.md",
+          "evidence_detail": "Memoria técnica formal (ThinkingSeed) identificada en '01_seed/seed-cea-brain-master.md'.",
           "remediation_hint": "Generar ThinkingSeed GenAI formal en 01_seed/."
         },
         {
           "criterion_id": "M10-C02",
           "name": "Guía de Operación y Catálogo de Tools",
           "fulfilled": true,
-          "evidence_path": "README_ES.md",
-          "evidence_detail": "Instrucciones operativas y ayuda de comandos documentadas en 'README_ES.md'.",
+          "evidence_path": "01_seed/seed-cea-brain-master.md",
+          "evidence_detail": "Instrucciones operativas y ayuda de comandos documentadas en '01_seed/seed-cea-brain-master.md'.",
           "remediation_hint": "Documentar catálogo de herramientas y guía de uso en README."
         },
         {
           "criterion_id": "M10-C03",
           "name": "Roadmap de Evolución Multimodal y Agéntica",
           "fulfilled": true,
-          "evidence_path": "src/context_auditor/adapters/antigravity.py",
-          "evidence_detail": "Interfaces de extensibilidad y adaptadores multicanal verificados en 'src/context_auditor/adapters/antigravity.py'.",
+          "evidence_path": "src/context_auditor/adapters/__init__.py",
+          "evidence_detail": "Interfaces de extensibilidad y adaptadores multicanal verificados en 'src/context_auditor/adapters/__init__.py'.",
           "remediation_hint": "Documentar roadmap de evolución en el plan maestro."
         }
       ],
@@ -449,26 +453,6 @@
       "files_to_touch": [
         ".context.yaml",
         "schemas/"
-      ]
-    },
-    {
-      "priority": "P2",
-      "module_id": "M06",
-      "criterion_id": "M06-C02",
-      "action": "Asegurar manejo robusto de streaming y persistencia de memoria.",
-      "impact_score": 5.0,
-      "files_to_touch": [
-        "src/"
-      ]
-    },
-    {
-      "priority": "P2",
-      "module_id": "M09",
-      "criterion_id": "M09-C01",
-      "action": "Integrar evaluación de prompts en pipeline de CI (.github/workflows).",
-      "impact_score": 5.0,
-      "files_to_touch": [
-        ".github/workflows/ci.yml"
       ]
     },
     {
@@ -515,18 +499,153 @@
     }
   ],
   "stats": {
-    "total_files_scanned": 99,
+    "total_files_scanned": 119,
     "seeds_detected": 1,
     "manifests_detected": 1,
-    "context_files_detected": 25,
+    "context_files_detected": 22,
     "schemas_detected": 2,
-    "tests_detected": 8,
-    "source_files_detected": 14,
+    "tests_detected": 10,
+    "source_files_detected": 16,
     "is_git": true,
     "domain_archetype": "llmops",
     "inspection_mode": "pipeline_orchestration"
   },
-  "consolidated_score": 68.75,
-  "maturity_band": "Construcción Activa / Madurez Media (50.0% - 74.9%)",
+  "fpai": {
+    "p_active": 769123.0,
+    "q_dead": 15488.0,
+    "q_dup": 24266.0,
+    "d_structural": 0.0,
+    "s_spectral": 770149.706,
+    "s_linear": 808877.0,
+    "divergence_ratio": 0.0479,
+    "power_factor_spectral": 0.9987,
+    "power_factor_linear": 0.9509,
+    "active_ratio": 0.9509,
+    "dead_ratio": 0.0191,
+    "redundant_ratio": 0.03,
+    "distortion_ratio": 0.0,
+    "calibration_state": "DETERMINISTIC",
+    "gain_coefficient": 1.0
+  },
+  "security": {
+    "shannon_entropy_max": 4.005,
+    "entropy_findings": [],
+    "pii_matches_count": 0,
+    "pii_findings": [],
+    "prompt_injection_surface_count": 0,
+    "prompt_injection_findings": [],
+    "supply_chain_lockfile_pinned": false,
+    "attack_surface_index": 10.0
+  },
+  "resilience": {
+    "afferent_coupling_ca": {
+      "src.context_auditor.adapters.__init__": 0,
+      "tests.unit.test_compactor": 0,
+      "tests.unit.test_local_endpoint_adapter": 0,
+      "src.context_auditor.scoring": 2,
+      "src.context_auditor.policies": 4,
+      "tests.unit.test_antigravity_adapter": 0,
+      "src.context_auditor.validators": 5,
+      "src.context_auditor.models": 18,
+      "src.context_auditor.compactor": 1,
+      "tests.unit.test_policies": 0,
+      "tests.e2e.test_cli": 0,
+      "src.context_auditor.signals": 4,
+      "tests.unit.test_validators": 0,
+      "src.context_auditor.normalizers.__init__": 0,
+      "src.context_auditor.adapters.antigravit": 4,
+      "src.context_auditor.interactive": 2,
+      "tests.unit.test_normalizers": 0,
+      "src.context_auditor.auditor": 22,
+      "tests.unit.test_interactive_session": 0,
+      "src.context_auditor.__init__": 0,
+      "tests.unit.test_scoring": 0,
+      "tests.unit.test_signals": 0,
+      "src.context_auditor.adapters.local_endpoint": 4,
+      "scripts.evaluate": 0,
+      "src.context_auditor.adapters.base": 10,
+      "src.context_auditor.adapters.gemini": 5,
+      "src.context_auditor.cli": 1
+    },
+    "efferent_coupling_ce": {
+      "scripts.evaluate": 2,
+      "src.context_auditor.__init__": 0,
+      "src.context_auditor.adapters.__init__": 5,
+      "src.context_auditor.adapters.antigravit": 3,
+      "src.context_auditor.adapters.base": 2,
+      "src.context_auditor.adapters.gemini": 3,
+      "src.context_auditor.adapters.local_endpoint": 3,
+      "src.context_auditor.auditor": 6,
+      "src.context_auditor.cli": 7,
+      "src.context_auditor.compactor": 4,
+      "src.context_auditor.interactive": 7,
+      "src.context_auditor.models": 0,
+      "src.context_auditor.normalizers.__init__": 3,
+      "src.context_auditor.policies": 2,
+      "src.context_auditor.scoring": 2,
+      "src.context_auditor.signals": 2,
+      "src.context_auditor.validators": 0,
+      "tests.e2e.test_cli": 0,
+      "tests.unit.test_antigravity_adapter": 7,
+      "tests.unit.test_compactor": 4,
+      "tests.unit.test_interactive_session": 3,
+      "tests.unit.test_local_endpoint_adapter": 4,
+      "tests.unit.test_normalizers": 1,
+      "tests.unit.test_policies": 3,
+      "tests.unit.test_scoring": 4,
+      "tests.unit.test_signals": 3,
+      "tests.unit.test_validators": 2
+    },
+    "instability_i": {
+      "scripts.evaluate": 1.0,
+      "src.context_auditor.__init__": 0.0,
+      "src.context_auditor.adapters.__init__": 1.0,
+      "src.context_auditor.adapters.antigravit": 0.429,
+      "src.context_auditor.adapters.base": 0.167,
+      "src.context_auditor.adapters.gemini": 0.375,
+      "src.context_auditor.adapters.local_endpoint": 0.429,
+      "src.context_auditor.auditor": 0.214,
+      "src.context_auditor.cli": 0.875,
+      "src.context_auditor.compactor": 0.8,
+      "src.context_auditor.interactive": 0.778,
+      "src.context_auditor.models": 0.0,
+      "src.context_auditor.normalizers.__init__": 1.0,
+      "src.context_auditor.policies": 0.333,
+      "src.context_auditor.scoring": 0.5,
+      "src.context_auditor.signals": 0.333,
+      "src.context_auditor.validators": 0.0,
+      "tests.e2e.test_cli": 0.0,
+      "tests.unit.test_antigravity_adapter": 1.0,
+      "tests.unit.test_compactor": 1.0,
+      "tests.unit.test_interactive_session": 1.0,
+      "tests.unit.test_local_endpoint_adapter": 1.0,
+      "tests.unit.test_normalizers": 1.0,
+      "tests.unit.test_policies": 1.0,
+      "tests.unit.test_scoring": 1.0,
+      "tests.unit.test_signals": 1.0,
+      "tests.unit.test_validators": 1.0
+    },
+    "spof_nodes": [
+      "src.context_auditor.models",
+      "src.context_auditor.validators"
+    ],
+    "resilience_patterns_count": {
+      "timeout": 15,
+      "retry": 0,
+      "circuit_breaker": 1,
+      "fallback": 3
+    },
+    "resilience_coverage_ratio": 0.704
+  },
+  "pruning_plan": {
+    "target_path": "D:/0001 HyperScale Thinking/PROYECTOS CLOUD/Research and Development/CEA BRAIN",
+    "items": [],
+    "total_tokens_recovered": 0,
+    "active_tokens_remaining": 1000,
+    "power_factor_target": 0.85,
+    "generated_at": "2026-10-22T13:24:10.697021+00:00"
+  },
+  "consolidated_score": 78.75,
+  "maturity_band": "Madurez Avanzada / Pre-producción (75.0% - 89.9%)",
   "active_bottleneck": "M03: Guardrails, Seguridad y Red Teaming (66.7% completado)"
 }

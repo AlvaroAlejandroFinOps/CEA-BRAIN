@@ -52,6 +52,12 @@ class EpistemicStatus(str, Enum):
     RUNTIME_MEASURED = "runtime_measured"
     UNKNOWN = "unknown"
 
+class GateRoute(str, Enum):
+    PASS = "pass"
+    FORCE_L2_AUDIT = "force_l2_audit"
+    REMEDIATE_FIRST = "remediate_first"
+    CIRCUIT_BREAKER_HALT = "circuit_breaker_halt"
+
 class AuditScope(BaseModel):
     messages_observed: Optional[int] = None
     documents_observed: Optional[int] = None
@@ -64,6 +70,15 @@ class DimensionScores(BaseModel):
     evidence_quality: int
     state_integrity: int
     redundancy_pressure: int
+    lexical_redundancy: Optional[int] = Field(default=None, ge=0, le=100)
+    positional_decay: Optional[int] = Field(default=None, ge=0, le=100)
+    prefix_volatility: Optional[int] = Field(default=None, ge=0, le=100)
+
+class L1GateVerdict(BaseModel):
+    route: GateRoute
+    l1_risk_score: float = Field(..., ge=0.0, le=100.0)
+    triggers: List[str] = Field(default_factory=list)
+    latency_ms: float = Field(..., ge=0.0)
 
 class Finding(BaseModel):
     finding_id: str
@@ -95,3 +110,4 @@ class AuditResult(BaseModel):
     recommended_actions: List[RecommendedAction] = Field(default_factory=list)
     triggered_rules: List[str] = Field(default_factory=list)
     limitations: List[str]
+    l1_verdict: Optional[L1GateVerdict] = None

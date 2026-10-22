@@ -59,6 +59,7 @@ class AntigravityAdapter(BaseLLMAdapter):
                 text=True,
                 capture_output=True,
                 encoding="utf-8",
+                errors="replace",
                 timeout=self.timeout
             )
         except FileNotFoundError as fnf:

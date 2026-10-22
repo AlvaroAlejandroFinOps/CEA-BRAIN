@@ -10,4 +10,4 @@ tier1_preload: false
 token_density: medium
 instructions: LECTURA CONDICIONAL (Tier 2 / Disparadores de Arquitectura). Prohibido precargar en Tier 1.
 key_files:
-  - "seed-context-entropy-auditor-master.md"
+  - "seed-cea-brain-master.md"

@@ -1,13 +1,13 @@
 {
   "$schema": "../schemas/tree.schema.json",
   "version": "3.0",
-  "project": "Context Entropy Auditor (CEA)",
+  "project": "CEA BRAIN",
   "architecture": "Gravity HyperScale Thinking",
-  "updated_at": "2026-10-21T21:15:00.140052+00:00",
-  "timestamp": 1792617300.1380594,
-  "bootloader": {"tier_1": ["AGENTS.md", ".context/tree.json", "[target_folder]/.context.yaml"], "tier_2": ["AGENTS.md", ".context/tree.json", "01_seed/seed-context-entropy-auditor-master.md", "[target_folder]/.context.yaml"]},
+  "updated_at": "2026-10-22T13:29:48.181641+00:00",
+  "timestamp": 1792675788.179651,
+  "bootloader": {"tier_1": ["AGENTS.md", ".context/tree.json", "[target_folder]/.context.yaml"], "tier_2": ["AGENTS.md", ".context/tree.json", "01_seed/seed-cea-brain-master.md", "[target_folder]/.context.yaml"]},
   "nodes": {
-    "01_seed": {"role": "dna", "prio": "p0", "crawl": true, "seed_ref": "required", "tier1_preload": false, "key_files": ["seed-context-entropy-auditor-master.md"]},
+    "01_seed": {"role": "dna", "prio": "p0", "crawl": true, "seed_ref": "required", "tier1_preload": false, "key_files": ["seed-cea-brain-master.md"]},
     "02_foundation/engine": {"role": "core_engine", "prio": "p1", "crawl": true, "seed_ref": "optional", "key_files": ["engine_readme.md"]},
     "03_research/notebooks": {"role": "eda", "prio": "p2", "crawl": false, "seed_ref": "optional"},
     "03_research/prompts": {"role": "prompt_engineering", "prio": "p1", "crawl": true, "seed_ref": "optional"},

@@ -4,7 +4,7 @@
   "type": "object",
   "properties": {
     "schema_version": { "type": "string", "enum": ["1.0.0"] },
-    "audit_version": { "type": "string" },
+    "audit_version": { "type": ["string", "null"] },
     "audit_id": { "type": "string" },
     "overall_status": {
       "type": "string",
@@ -14,11 +14,11 @@
     "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
     "evidence_coverage": { "type": "number", "minimum": 0, "maximum": 1 },
     "scope": {
-      "type": "object",
+      "type": ["object", "null"],
       "properties": {
-        "messages_observed": { "type": "integer" },
-        "documents_observed": { "type": "integer" },
-        "tool_outputs_observed": { "type": "integer" }
+        "messages_observed": { "type": ["integer", "null"] },
+        "documents_observed": { "type": ["integer", "null"] },
+        "tool_outputs_observed": { "type": ["integer", "null"] }
       }
     },
     "dimension_scores": {
@@ -29,7 +29,10 @@
         "context_contamination": { "type": "number", "enum": [0, 25, 50, 75, 100] },
         "evidence_quality": { "type": "number", "enum": [0, 25, 50, 75, 100] },
         "state_integrity": { "type": "number", "enum": [0, 25, 50, 75, 100] },
-        "redundancy_pressure": { "type": "number", "enum": [0, 25, 50, 75, 100] }
+        "redundancy_pressure": { "type": "number", "enum": [0, 25, 50, 75, 100] },
+        "lexical_redundancy": { "type": ["integer", "null"], "minimum": 0, "maximum": 100 },
+        "positional_decay": { "type": ["integer", "null"], "minimum": 0, "maximum": 100 },
+        "prefix_volatility": { "type": ["integer", "null"], "minimum": 0, "maximum": 100 }
       },
       "required": [
         "instruction_conflict", "task_ambiguity", "context_contamination",
@@ -53,7 +56,7 @@
             "items": { "type": "string" }
           },
           "explanation": { "type": "string" },
-          "confidence": { "type": "number", "minimum": 0, "maximum": 1 }
+          "confidence": { "type": ["number", "null"], "minimum": 0, "maximum": 1 }
         },
         "required": ["finding_id", "dimension", "epistemic_status", "severity", "evidence_refs", "explanation"]
       }
@@ -79,6 +82,22 @@
     "limitations": {
       "type": "array",
       "items": { "type": "string" }
+    },
+    "l1_verdict": {
+      "type": ["object", "null"],
+      "properties": {
+        "route": {
+          "type": "string",
+          "enum": ["pass", "force_l2_audit", "remediate_first", "circuit_breaker_halt"]
+        },
+        "l1_risk_score": { "type": "number", "minimum": 0, "maximum": 100 },
+        "triggers": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "latency_ms": { "type": "number", "minimum": 0 }
+      },
+      "required": ["route", "l1_risk_score", "triggers", "latency_ms"]
     }
   },
   "required": [

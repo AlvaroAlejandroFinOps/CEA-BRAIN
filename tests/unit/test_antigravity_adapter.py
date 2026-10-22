@@ -225,3 +225,41 @@ def test_resolve_adapter_options():
     adapter_gem = resolve_adapter(adapter_name="gemini", model="gemini-2.5-flash")
     assert isinstance(adapter_gem, GeminiAdapter)
     assert adapter_gem.model_name == "gemini-2.5-flash"
+
+    # Explicit local_endpoint
+    from src.context_auditor.adapters.local_endpoint import LocalEndpointAdapter
+    adapter_loc = resolve_adapter(adapter_name="local_endpoint", model="qwen2.5:14b", endpoint_url="http://localhost:8000/v1")
+    assert isinstance(adapter_loc, LocalEndpointAdapter)
+    assert adapter_loc.model == "qwen2.5:14b"
+    assert adapter_loc.base_url == "http://localhost:8000/v1"
+
+
+@patch("subprocess.run")
+def test_antigravity_adapter_stderr_isolation(mock_run, sample_audit_input, sample_signals):
+    audit_data = {
+        "confidence": 0.90,
+        "evidence_coverage": 1.0,
+        "dimension_scores": {
+            "instruction_conflict": 0,
+            "task_ambiguity": 0,
+            "context_contamination": 0,
+            "evidence_quality": 0,
+            "state_integrity": 0,
+            "redundancy_pressure": 0,
+        },
+        "findings": [],
+        "recommended_actions": [],
+        "limitations": [],
+    }
+
+    # Stderr contains warning, stdout contains clean JSON
+    mock_run.return_value = MagicMock(
+        returncode=0,
+        stdout=json.dumps(audit_data),
+        stderr="WARNING: GPU memory low, falling back to CPU."
+    )
+
+    adapter = AntigravityAdapter()
+    result = adapter.evaluate_context(sample_audit_input, sample_signals)
+    assert result["confidence"] == 0.90
+    assert result["dimension_scores"]["instruction_conflict"] == 0

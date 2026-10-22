@@ -1,0 +1,835 @@
+{
+  ".agentignore": {
+    "mtime": 1790467516.2890265,
+    "size": 211,
+    "sha256": "2f8be57be335469c99868d75dbf60b50626eb5a859e030737e6cc053afde219e",
+    "line_count": 12,
+    "token_estimate": 52
+  },
+  ".gitignore": {
+    "mtime": 1790058096.5776408,
+    "size": 160,
+    "sha256": "2a5d17cf118e2c90f46acfc880570f970a35a65ed066aa7733b52b1c2db5b473",
+    "line_count": 12,
+    "token_estimate": 40
+  },
+  "AGENTS.md": {
+    "mtime": 1792674319.0289712,
+    "size": 3659,
+    "sha256": "70425a0e35147151e5bcb32a6ebdc7db7c72587dab36f4979fda15d1549818dd",
+    "line_count": 57,
+    "token_estimate": 914
+  },
+  "Context Entropy Auditor.md": {
+    "mtime": 1788548759.4940536,
+    "size": 5192,
+    "sha256": "716930732d60cd207617d3cf994ee12bef0b6d078f70947f0db75871060a09ef",
+    "line_count": 54,
+    "token_estimate": 1298
+  },
+  "CONTRIBUTING.md": {
+    "mtime": 1788619983.329169,
+    "size": 1122,
+    "sha256": "ad9b08e1391d5b09701ce596ff09f3fbf925db9243b5f4e497bf30c7a09bc6b8",
+    "line_count": 19,
+    "token_estimate": 280
+  },
+  "Entropy.jpeg": {
+    "mtime": 1788641369.2415123,
+    "size": 2416590,
+    "sha256": "de6b41f0195bc8e01145a2d4708391fa2a04fd3edf237b59ee8ee5ef050ed253",
+    "line_count": 0,
+    "token_estimate": 604147
+  },
+  "LICENSE": {
+    "mtime": 1788619981.2167366,
+    "size": 1076,
+    "sha256": "99a1fa3f3a25b9606b122f478b8318428f570ca5a6c1f9cc92cd6c16ea6d5cfe",
+    "line_count": 21,
+    "token_estimate": 269
+  },
+  "pyproject.toml": {
+    "mtime": 1788619391.3784487,
+    "size": 556,
+    "sha256": "5efd588ab584695de6e05b32e4a2cbfe59993238cc8c1883fef7dc3f32da57ce",
+    "line_count": 25,
+    "token_estimate": 139
+  },
+  "README.md": {
+    "mtime": 1792674483.1358743,
+    "size": 25689,
+    "sha256": "10edb7640059d4cd8e4a7375934b1d5446e08eb8a55b2a0ae08050cbbbf97b48",
+    "line_count": 362,
+    "token_estimate": 6422
+  },
+  "README_ES.md": {
+    "mtime": 1792674540.422162,
+    "size": 27031,
+    "sha256": "d97fa75aaec28d76d6c4b2e85ed1263a2f0ca6f4859cb464283fe96b1798dad9",
+    "line_count": 362,
+    "token_estimate": 6757
+  },
+  "resultado_auditoria.json": {
+    "mtime": 1790474430.738493,
+    "size": 4050,
+    "sha256": "f4a3da80872baeccec3cc5433bde4f88ec6dad4a517a3f7a4ea0dfcdcdce675b",
+    "line_count": 113,
+    "token_estimate": 1012
+  },
+  "ROADMAP.md": {
+    "mtime": 1788618473.121418,
+    "size": 2376,
+    "sha256": "eece66a715700fa5207826186546841dcd30923cd66ca9308bf6423774238942",
+    "line_count": 53,
+    "token_estimate": 594
+  },
+  "run_audit.ps1": {
+    "mtime": 1790475943.1342006,
+    "size": 1358,
+    "sha256": "d3a98656322834d308fdb2a0aafb5b8f87454205eceff3bf76fa4e9636411c33",
+    "line_count": 32,
+    "token_estimate": 339
+  },
+  "run_audit.sh": {
+    "mtime": 1792672675.754665,
+    "size": 1678,
+    "sha256": "665bd414a1056eab47ce1ab13e1dcfc3dddc8b8e12069ecebebcf6f52d97ad77",
+    "line_count": 48,
+    "token_estimate": 419
+  },
+  ".context/tree.json": {
+    "mtime": 1792674331.593577,
+    "size": 3477,
+    "sha256": "0dcf282c5370613a98cd5aa8206419ac74bd403c96225adb4e794101dc30e674",
+    "line_count": 39,
+    "token_estimate": 869
+  },
+  ".github/workflows/ci.yml": {
+    "mtime": 1792672682.2038581,
+    "size": 848,
+    "sha256": "a8c1646fd7303b0dd0e5645519ec0a7f34281d825f3524e65b352900c761f9bb",
+    "line_count": 38,
+    "token_estimate": 212
+  },
+  "01_seed/.context.yaml": {
+    "mtime": 1792674350.8453345,
+    "size": 412,
+    "sha256": "598f1e82c6f497585df9136b57e86e78cec8e32230d5a0f06e6d78708f9af1d9",
+    "line_count": 13,
+    "token_estimate": 103
+  },
+  "01_seed/seed-cea-brain-master.md": {
+    "mtime": 1792674377.679227,
+    "size": 57061,
+    "sha256": "dca6920a5269cad02e72f20e831eb419d39ae975688bd8f35df2e38ad64206dd",
+    "line_count": 595,
+    "token_estimate": 14265
+  },
+  "02_foundation/engine/.context.yaml": {
+    "mtime": 1792617299.6101396,
+    "size": 401,
+    "sha256": "49f06c764d6a4ad903f5981e1546c0c29ad3399cfa21ebca77b9e2fbc50a8b60",
+    "line_count": 12,
+    "token_estimate": 100
+  },
+  "02_foundation/engine/engine_readme.md": {
+    "mtime": 1790467516.28803,
+    "size": 4046,
+    "sha256": "73203061f8f3e014ead7b0f156ebbd3fc9dd6db3f1edf0ae608ff6a236f791b3",
+    "line_count": 37,
+    "token_estimate": 1011
+  },
+  "03_research/experiments/.context.yaml": {
+    "mtime": 1792617299.6156213,
+    "size": 343,
+    "sha256": "6b7aaa19adf3fb9034394b05ec0ca75b64aec50c33e3299943c6fcd8876c03ec",
+    "line_count": 10,
+    "token_estimate": 85
+  },
+  "03_research/notebooks/.context.yaml": {
+    "mtime": 1792617299.6121342,
+    "size": 390,
+    "sha256": "f943ebb021bba1c5ca13171c7fdb98f6783e80611706f32da4be450773a1e2c0",
+    "line_count": 10,
+    "token_estimate": 97
+  },
+  "03_research/prompts/.context.yaml": {
+    "mtime": 1792617299.6146288,
+    "size": 350,
+    "sha256": "8a95f230e75f5b824c50c3483541b356742417a54d96ef013349a6a8413ac779",
+    "line_count": 10,
+    "token_estimate": 87
+  },
+  "artifacts/MetricsThinking.json": {
+    "mtime": 1792675369.511015,
+    "size": 7941,
+    "sha256": "1eb0b36f589e4fc67bcabf350cf650deb2b3ed66b1b3c3389fcaf387b914a79b",
+    "line_count": 228,
+    "token_estimate": 1985
+  },
+  "artifacts/MetricsThinking.md": {
+    "mtime": 1792675369.5070245,
+    "size": 6129,
+    "sha256": "25460992d64f7fcefdfb173b9d895401883739a78e2d45a95db8d520605a1488",
+    "line_count": 136,
+    "token_estimate": 1532
+  },
+  "artifacts/Fases/README.md": {
+    "mtime": 1788620005.703429,
+    "size": 1167,
+    "sha256": "4d0ac4c50c4f3378f4deb7b84434b867f1daed8e477bcf22f1de19fef5cd186d",
+    "line_count": 23,
+    "token_estimate": 291
+  },
+  "artifacts/Fases/Inc0_Fundacion_Epistemica/ENTREGABLES.md": {
+    "mtime": 1788618234.7494938,
+    "size": 701,
+    "sha256": "529d24007457794c2c317b95b63bdeecda334ea2d2081c4e312d838929388ea3",
+    "line_count": 20,
+    "token_estimate": 175
+  },
+  "artifacts/Fases/Inc1_Prompt_Core/ENTREGABLES.md": {
+    "mtime": 1788618241.189081,
+    "size": 1128,
+    "sha256": "3c468ba7bfd86dd79e75f994f73c36b8f2c8226f8f99d705674651db691523c8",
+    "line_count": 28,
+    "token_estimate": 282
+  },
+  "artifacts/Fases/Inc2_Esquemas_Modelos/ENTREGABLES.md": {
+    "mtime": 1788618247.315114,
+    "size": 1148,
+    "sha256": "ca3db401516881ddc424e062c4ba817868150c8af276d919feda6962be014f62",
+    "line_count": 25,
+    "token_estimate": 287
+  },
+  "artifacts/Fases/Inc3_Scoring_Engine/ENTREGABLES.md": {
+    "mtime": 1788618254.5720258,
+    "size": 941,
+    "sha256": "1d299c9b946432a95d8c40081dc5c9663d03afb7a1048419f54709de0b5e58e7",
+    "line_count": 26,
+    "token_estimate": 235
+  },
+  "artifacts/Fases/Inc4_Senales_Deterministas/ENTREGABLES.md": {
+    "mtime": 1788618260.0123441,
+    "size": 991,
+    "sha256": "b32b4309f7638e2ecf4b61bb704911bb006079cdf4c4c80b90318930059f1a39",
+    "line_count": 30,
+    "token_estimate": 247
+  },
+  "artifacts/Fases/Inc5_SDK_CLI/ENTREGABLES.md": {
+    "mtime": 1788618265.4089937,
+    "size": 898,
+    "sha256": "2af47eaca2a2e526beeea6f6f0f855f5ed0ae6281263e4bd7b449113cf6df06c",
+    "line_count": 28,
+    "token_estimate": 224
+  },
+  "artifacts/Fases/Inc6_Dataset_Evaluacion/ENTREGABLES.md": {
+    "mtime": 1788618270.61407,
+    "size": 707,
+    "sha256": "0223546dbafecef785a7a8f68b0970e304da11b25831447c4fcd60ffc2e4defd",
+    "line_count": 20,
+    "token_estimate": 176
+  },
+  "artifacts/Fases/Inc7_Publicacion/ENTREGABLES.md": {
+    "mtime": 1788618272.7394028,
+    "size": 841,
+    "sha256": "dc0b48416a8314d0231b214a734fb99c84dff3c8c08960c5dfba665ab347ced1",
+    "line_count": 24,
+    "token_estimate": 210
+  },
+  "artifacts/plans/active/.context.yaml": {
+    "mtime": 1792617299.6247706,
+    "size": 380,
+    "sha256": "155d7088c1864ee12d48dd0f8f28cb449a5432aaaa6bfc47bec88d0c7cdd8241",
+    "line_count": 10,
+    "token_estimate": 95
+  },
+  "artifacts/plans/active/CONTEXT_PRUNING_PLAN.json": {
+    "mtime": 1792675369.509019,
+    "size": 274,
+    "sha256": "918fffa214ea4cea6e1a97eb37ee353714f4f1031a312659ab543b7dc804b746",
+    "line_count": 8,
+    "token_estimate": 68
+  },
+  "artifacts/plans/active/implementation_plan.md": {
+    "mtime": 1792671521.2579405,
+    "size": 68561,
+    "sha256": "cc7198da9d37821ec36f5f7eaac9551a9651c0bbd01b8306b1905ea6f7b229cf",
+    "line_count": 843,
+    "token_estimate": 17140
+  },
+  "artifacts/plans/active/INFERRED_ROADMAP.md": {
+    "mtime": 1792675369.508021,
+    "size": 843,
+    "sha256": "e939a6f730505852d70bf6569f489e38aebcd7e7882f8d0a75e3389200b88a6a",
+    "line_count": 13,
+    "token_estimate": 210
+  },
+  "artifacts/plans/archive/.context.yaml": {
+    "mtime": 1792617299.6277616,
+    "size": 411,
+    "sha256": "acf1b5481f0370c8d932cb1795f506d5f6a99aa1492bae1c042df35d91499bd8",
+    "line_count": 10,
+    "token_estimate": 102
+  },
+  "artifacts/plans/archive/implementation_plan.md": {
+    "mtime": 1790467978.9238381,
+    "size": 14391,
+    "sha256": "be426ce175b36902835e759b0d6768467204967ad01e1f19f290e694eae5ac66",
+    "line_count": 307,
+    "token_estimate": 3597
+  },
+  "artifacts/plans/archive/INSTRUCCION_MAESTRA_CONTEXT_ENTROPY_AUDITOR.md": {
+    "mtime": 1788616524.8801916,
+    "size": 36843,
+    "sha256": "eb41c3db21b76bfbea059fe49ddf528065de318902d2ea783da145f251bb1fed",
+    "line_count": 1150,
+    "token_estimate": 9210
+  },
+  "artifacts/plans/archive/Analisis de Planes/Analisis_y_Plan_Definitivo.md": {
+    "mtime": 1788615917.4329967,
+    "size": 5412,
+    "sha256": "a75ecbf1fb1c7d428911f66d8f8721339d53c24bc088fc1dd696163024af629a",
+    "line_count": 49,
+    "token_estimate": 1353
+  },
+  "artifacts/plans/archive/Analisis de Planes/Plan_Optimizacion_GitHub.md": {
+    "mtime": 1788615917.325853,
+    "size": 2618,
+    "sha256": "6fdf0b180ec731e66b46e0be4b78e56407e40f686a61293a03d4a08f93068397",
+    "line_count": 35,
+    "token_estimate": 654
+  },
+  "artifacts/plans/archive/Analisis de Planes/Plan_Utilidades_Avanzadas.md": {
+    "mtime": 1788615917.2163763,
+    "size": 2289,
+    "sha256": "7d629cf1ede23d418b2f102acd7ce2c693bbb0b4c544fef2446b1660e166dc5e",
+    "line_count": 34,
+    "token_estimate": 572
+  },
+  "artifacts/plans/metricsthinking/.context.yaml": {
+    "mtime": 1792617299.625767,
+    "size": 561,
+    "sha256": "99e32a4b14ed139b1b9581343b8c805c2b08976286ec7dd1ccfdda56f50ee67d",
+    "line_count": 13,
+    "token_estimate": 140
+  },
+  "artifacts/Task del agente/task.md": {
+    "mtime": 1790467969.5817657,
+    "size": 1703,
+    "sha256": "c37a5fbc0f01f73407b1c9b41ec5dd7b54cbb1c884b75941a0c5336c956f8b09",
+    "line_count": 51,
+    "token_estimate": 425
+  },
+  "config/.context.yaml": {
+    "mtime": 1792617299.635038,
+    "size": 338,
+    "sha256": "e1ee7bf86706e25a4061f38d24e3b4fea4fb9d35336f33ad19f442115fafac1c",
+    "line_count": 10,
+    "token_estimate": 84
+  },
+  "config/scoring_defaults.yaml": {
+    "mtime": 1792672038.2999246,
+    "size": 971,
+    "sha256": "1a4eeb82b23aa84bf2ec5401353498baaeec086b12d49133f9cd028001c5d1d7",
+    "line_count": 43,
+    "token_estimate": 242
+  },
+  "config/profiles/agent-skill.yaml": {
+    "mtime": 1790644697.298847,
+    "size": 11837,
+    "sha256": "081d6056923937d38488070c6f0d4ec7cc44544e04ce901da1fc194d1734d6c6",
+    "line_count": 221,
+    "token_estimate": 2959
+  },
+  "config/profiles/chaos-eng.yaml": {
+    "mtime": 1790602890.9913266,
+    "size": 11936,
+    "sha256": "0e0eb6a4230aa12b89d6da9a4ed6f7c7f5d6fc9844b9d4307d8c2edbb167bfad",
+    "line_count": 221,
+    "token_estimate": 2984
+  },
+  "config/profiles/data-platform.yaml": {
+    "mtime": 1790099895.440554,
+    "size": 10340,
+    "sha256": "d871c0c08ad7ff3dc3db4e04af6d242b1de301192573e24987bcf3ef50358495",
+    "line_count": 219,
+    "token_estimate": 2585
+  },
+  "config/profiles/dataops.yaml": {
+    "mtime": 1790602786.130478,
+    "size": 11180,
+    "sha256": "434da96d75470a05b4aa9dd43e74acd54e2e80d31b77944ff3815356fddb92d1",
+    "line_count": 221,
+    "token_estimate": 2795
+  },
+  "config/profiles/default.yaml": {
+    "mtime": 1790099895.4415512,
+    "size": 10997,
+    "sha256": "d097eaa132965fc51263290f8caacde6b2ebd387622fc83cff75de193005ed4b",
+    "line_count": 219,
+    "token_estimate": 2749
+  },
+  "config/profiles/devsecops.yaml": {
+    "mtime": 1790602844.322875,
+    "size": 11611,
+    "sha256": "f6190825f0e989989b2641d5ead4e81bd9fa6f5407793b120c12fa0044d77a77",
+    "line_count": 221,
+    "token_estimate": 2902
+  },
+  "config/profiles/dual-track.yaml": {
+    "mtime": 1790602860.2738423,
+    "size": 11567,
+    "sha256": "0bd7f4cbc969b85775223a2020dff5636716af7404771d20151279e19e6ea8cb",
+    "line_count": 221,
+    "token_estimate": 2891
+  },
+  "config/profiles/gitops.yaml": {
+    "mtime": 1790602812.6361558,
+    "size": 11273,
+    "sha256": "125782bcaf3c5fd182708ef4ed733abe3861c1778d218f85f49e9fe50036d8d6",
+    "line_count": 221,
+    "token_estimate": 2818
+  },
+  "config/profiles/llmops.yaml": {
+    "mtime": 1790602771.3815794,
+    "size": 11269,
+    "sha256": "e3b444d0f83e64a0af7054e2b7833b47f8979e330151be1629908bf801dfe292",
+    "line_count": 221,
+    "token_estimate": 2817
+  },
+  "config/profiles/mlops.yaml": {
+    "mtime": 1790602754.4237351,
+    "size": 11056,
+    "sha256": "539dd6f6a8ff40ed412614d98be85246221d0983b281d54fe1452eac3664d1a9",
+    "line_count": 221,
+    "token_estimate": 2764
+  },
+  "config/profiles/platform-eng.yaml": {
+    "mtime": 1790602829.429311,
+    "size": 11404,
+    "sha256": "b8b3289adcdf1d0a7f82389383bfc990136255a78604bf3dc2d432e1e8215777",
+    "line_count": 221,
+    "token_estimate": 2851
+  },
+  "config/profiles/sdd.yaml": {
+    "mtime": 1790602907.3699267,
+    "size": 12407,
+    "sha256": "e7477f2f8bb2a42f23e4e4d0efc8afdb99dcf1af0bb80ffbbe4402e089cebdf7",
+    "line_count": 221,
+    "token_estimate": 3101
+  },
+  "config/profiles/team-topologies.yaml": {
+    "mtime": 1790602875.8638947,
+    "size": 11741,
+    "sha256": "5b12b056fc457b71354ad333a67e246fd81c71e3f1d44fe79a521ac3e52a6401",
+    "line_count": 221,
+    "token_estimate": 2935
+  },
+  "config/profiles/web-app.yaml": {
+    "mtime": 1790603277.369064,
+    "size": 10893,
+    "sha256": "68a62ba3cddafdeddffc0a453775687d14026416b2470879096c88d64efd69e1",
+    "line_count": 221,
+    "token_estimate": 2723
+  },
+  "dataset/eval_dataset.jsonl": {
+    "mtime": 1788619582.0948644,
+    "size": 1449,
+    "sha256": "aa4438f8a6a533352b9f228c1ac9974c1b51f3e54fdcbd556f095b0f855474d5",
+    "line_count": 5,
+    "token_estimate": 362
+  },
+  "dataset/self_audit.json": {
+    "mtime": 1788621405.9140413,
+    "size": 157329,
+    "sha256": "78933f6d0c1cbf574be814077d36089999cb9199ec7e57b0925435939b3f9c0a",
+    "line_count": 317,
+    "token_estimate": 39332
+  },
+  "docs/methodology.md": {
+    "mtime": 1788618413.369484,
+    "size": 6908,
+    "sha256": "47dc1da2d4f551bfb16e270a909bb06ee10eb54549b8e2630b977df306dd83c2",
+    "line_count": 135,
+    "token_estimate": 1727
+  },
+  "docs/scoring.md": {
+    "mtime": 1788618415.4601848,
+    "size": 8751,
+    "sha256": "659b923351e7f4edadea5342f5261a2fbfca18735a36f9638c320a32e59b581d",
+    "line_count": 182,
+    "token_estimate": 2187
+  },
+  "docs/terminology.md": {
+    "mtime": 1788618471.0176075,
+    "size": 6813,
+    "sha256": "13772842d82f82f0fc327af12cb25b8ebf1c8615cba528c9191170fdaa53c91f",
+    "line_count": 125,
+    "token_estimate": 1703
+  },
+  "docs/architecture/.context.yaml": {
+    "mtime": 1792617299.6297574,
+    "size": 350,
+    "sha256": "44322449efe9adf324dd52770551b5e3ab3c0ee4418b85cb17e06aa45968bde5",
+    "line_count": 10,
+    "token_estimate": 87
+  },
+  "docs/notes/.context.yaml": {
+    "mtime": 1792617299.6327503,
+    "size": 351,
+    "sha256": "09647dcf9838963568410e4b605020e43bd3b5e00372faea706399bf233e010c",
+    "line_count": 10,
+    "token_estimate": 87
+  },
+  "docs/specs/.context.yaml": {
+    "mtime": 1792617299.630753,
+    "size": 333,
+    "sha256": "a4e9794274b7db3bf48af3e121fce7f7076d4f06f7850939a0617be303d3403f",
+    "line_count": 10,
+    "token_estimate": 83
+  },
+  "examples/ambiguous-task.json": {
+    "mtime": 1788618844.2143133,
+    "size": 386,
+    "sha256": "416422ce29cde7f9ac30cae38ff781272aaa2fe91f723efa7c76b44be05ac0bd",
+    "line_count": 19,
+    "token_estimate": 96
+  },
+  "examples/contaminated-context.json": {
+    "mtime": 1788618847.957953,
+    "size": 942,
+    "sha256": "5c3ea0f980632da80c6739e0c7b5eca79490138f0d5092a7abf6f5687981591f",
+    "line_count": 37,
+    "token_estimate": 235
+  },
+  "examples/healthy-conversation.json": {
+    "mtime": 1788618842.0975828,
+    "size": 632,
+    "sha256": "32c66c2d4b960f5675ab9213f292c4cd9beebb040ea489fd49dab45fd434b76e",
+    "line_count": 25,
+    "token_estimate": 158
+  },
+  "examples/instruction-conflict.json": {
+    "mtime": 1788618850.069126,
+    "size": 1010,
+    "sha256": "4f9ee1a985a34aa0cb328726e99b848cb3aba656691558505c3eadbfd05f08a5",
+    "line_count": 25,
+    "token_estimate": 252
+  },
+  "examples/tool-state-drift.json": {
+    "mtime": 1788618852.1992357,
+    "size": 1745,
+    "sha256": "82368bf860c58f7a0ba90d77fd4f8d6e5dbf2567028339e66e5fe87811926ff3",
+    "line_count": 70,
+    "token_estimate": 436
+  },
+  "logs/.context.yaml": {
+    "mtime": 1792617299.6481464,
+    "size": 343,
+    "sha256": "f69089e9dad91a7a64f7c4d74dfd1ac5de0f8c98ddee893e2fcd2e512091e7b8",
+    "line_count": 10,
+    "token_estimate": 85
+  },
+  "prompts/auditor-simple-en.md": {
+    "mtime": 1788618697.4283288,
+    "size": 2917,
+    "sha256": "d3c670f79777bed5905484287f9dba8813be8dcbcb5e9863270299b1210a4634",
+    "line_count": 53,
+    "token_estimate": 729
+  },
+  "prompts/auditor-simple-es.md": {
+    "mtime": 1788618690.8192232,
+    "size": 3203,
+    "sha256": "6642c8b7af6d1bc7878df8dbd0438151a0375f6367a421848bc53771a063c9e5",
+    "line_count": 53,
+    "token_estimate": 800
+  },
+  "prompts/auditor-technical-en.md": {
+    "mtime": 1788618701.6012003,
+    "size": 3491,
+    "sha256": "e6d8cf8f7b2207bcb7f99a78b430d7a5815b38badc0f9f2468698a2d7443d465",
+    "line_count": 59,
+    "token_estimate": 872
+  },
+  "prompts/auditor-technical-es.md": {
+    "mtime": 1788618699.5166428,
+    "size": 3742,
+    "sha256": "964a3f84a101e7cd6a16566ea7c5c84e2ab796afdebf19a2486fe80cbc3f36f2",
+    "line_count": 59,
+    "token_estimate": 935
+  },
+  "prompts/v0-original.md": {
+    "mtime": 1788618322.5033915,
+    "size": 5213,
+    "sha256": "629cb3c53469144a1a49a225e9314ed8a4367e92f033473cfad7801685495375",
+    "line_count": 56,
+    "token_estimate": 1303
+  },
+  "schemas/.context.yaml": {
+    "mtime": 1792617299.6419916,
+    "size": 368,
+    "sha256": "6e1b1759ca038be522a39640e8a98adf781817b7c3c0968a090b54580b4dced4",
+    "line_count": 10,
+    "token_estimate": 92
+  },
+  "schemas/audit-input.schema.json": {
+    "mtime": 1788618819.5445898,
+    "size": 1683,
+    "sha256": "7fe3956808fc0d2d5239234848d81df2bfcd119d8e1ccb6028a6b4a1bd3ba87c",
+    "line_count": 60,
+    "token_estimate": 420
+  },
+  "schemas/audit-result.schema.json": {
+    "mtime": 1792672253.230162,
+    "size": 4125,
+    "sha256": "1afcbb1a40e0bf69c5099f465b4f5937dd9c8edbd145e4a7bdae4d451611c0b5",
+    "line_count": 107,
+    "token_estimate": 1031
+  },
+  "scripts/.context.yaml": {
+    "mtime": 1792617299.6431515,
+    "size": 318,
+    "sha256": "75f8fae5606ee34cb897e3b6e08b0c7ec8e173d032fac9ce812a0b74ac062a09",
+    "line_count": 10,
+    "token_estimate": 79
+  },
+  "scripts/Context Entropy Auditor.md": {
+    "mtime": 1788548759.4940536,
+    "size": 5192,
+    "sha256": "716930732d60cd207617d3cf994ee12bef0b6d078f70947f0db75871060a09ef",
+    "line_count": 54,
+    "token_estimate": 1298
+  },
+  "scripts/evaluate.py": {
+    "mtime": 1792672833.613096,
+    "size": 1930,
+    "sha256": "c7474358b4c3e6034f8ebfefcb2b12a0aab4b8869c1624b1345c4c10510f475e",
+    "line_count": 51,
+    "token_estimate": 482
+  },
+  "src/cloud_jobs/.context.yaml": {
+    "mtime": 1792617299.6176112,
+    "size": 437,
+    "sha256": "ed6e89ac38b0fb760f46da565844deaf4ec0f769fdd9619de02d64f47807845b",
+    "line_count": 13,
+    "token_estimate": 109
+  },
+  "src/context_auditor/auditor.py": {
+    "mtime": 1792672325.6711397,
+    "size": 6164,
+    "sha256": "fe1a2f101e595bca687e130c919b944916061e96cfd208e7799cda8e2f5af8e5",
+    "line_count": 152,
+    "token_estimate": 1541
+  },
+  "src/context_auditor/cli.py": {
+    "mtime": 1792672594.8985286,
+    "size": 4664,
+    "sha256": "c3f530dedf3d02d5fe06d40bbba361575ce668b6fe02d8320259afd62d170cea",
+    "line_count": 100,
+    "token_estimate": 1166
+  },
+  "src/context_auditor/compactor.py": {
+    "mtime": 1792672501.3453999,
+    "size": 5088,
+    "sha256": "28f9709a66c94855d26ced2d83a1a5b9438b8dc647f91a8cf9e7742813537280",
+    "line_count": 135,
+    "token_estimate": 1272
+  },
+  "src/context_auditor/interactive.py": {
+    "mtime": 1792672429.188637,
+    "size": 28604,
+    "sha256": "e2aea893b5aea288fa96d72270038ad4886c54b6fc9112c31905a188fba06b3d",
+    "line_count": 578,
+    "token_estimate": 7151
+  },
+  "src/context_auditor/models.py": {
+    "mtime": 1792672241.7017207,
+    "size": 3360,
+    "sha256": "5c5cd75ca624bce6cfe8f06563a1464b94179fee486a2833906a5bcc2ac4adc6",
+    "line_count": 113,
+    "token_estimate": 840
+  },
+  "src/context_auditor/policies.py": {
+    "mtime": 1792672380.1260538,
+    "size": 1928,
+    "sha256": "e6da95af4d684a7bef6391829f844318b357381caac3880c89510c05317b3883",
+    "line_count": 58,
+    "token_estimate": 482
+  },
+  "src/context_auditor/scoring.py": {
+    "mtime": 1792672312.359343,
+    "size": 8377,
+    "sha256": "d1108c6c2bd25c39e64cfb61997401a7971d653cd79b76ba15db5cdf1195a8d4",
+    "line_count": 223,
+    "token_estimate": 2094
+  },
+  "src/context_auditor/signals.py": {
+    "mtime": 1792672212.8054879,
+    "size": 12145,
+    "sha256": "65974ff6cc3bf5a0f6206a8827576e0f4782414f99cad1d212aa426482944ae3",
+    "line_count": 311,
+    "token_estimate": 3036
+  },
+  "src/context_auditor/validators.py": {
+    "mtime": 1788618876.81714,
+    "size": 1151,
+    "sha256": "9aa2d802a265a2545ebe52058b8325d11a568bb069d36b6f0efb47f1afc9355d",
+    "line_count": 30,
+    "token_estimate": 287
+  },
+  "src/context_auditor/__init__.py": {
+    "mtime": 1788618868.9953077,
+    "size": 131,
+    "sha256": "ef05cc0d23873deeb1f58057f522c1a1b1c8f00cd2770f88065a53f9004a03ca",
+    "line_count": 6,
+    "token_estimate": 32
+  },
+  "src/context_auditor/adapters/antigravity.py": {
+    "mtime": 1792672576.4560995,
+    "size": 7755,
+    "sha256": "8c52e6c1863089d1d4bd7b007b472750479f9cb4cff8393bcc0cc42f5d4b908a",
+    "line_count": 199,
+    "token_estimate": 1938
+  },
+  "src/context_auditor/adapters/base.py": {
+    "mtime": 1790472978.219138,
+    "size": 669,
+    "sha256": "f0c13a59fbf526996b8dea92577d97bf95a0f3de5d94fd7993d3e7bb9effc70c",
+    "line_count": 17,
+    "token_estimate": 167
+  },
+  "src/context_auditor/adapters/gemini.py": {
+    "mtime": 1788619373.4505198,
+    "size": 1970,
+    "sha256": "a92465834118ff07e27d2eafc914fd774d7e49cc6fc23cc79cec2adde733c5f1",
+    "line_count": 44,
+    "token_estimate": 492
+  },
+  "src/context_auditor/adapters/local_endpoint.py": {
+    "mtime": 1792672552.009288,
+    "size": 6852,
+    "sha256": "d85a9a39e0ad6fe53394645e8b007c951ce14573f998da47ef833582ab56132c",
+    "line_count": 178,
+    "token_estimate": 1713
+  },
+  "src/context_auditor/adapters/__init__.py": {
+    "mtime": 1792672582.1895533,
+    "size": 436,
+    "sha256": "3a72760db486712e39d11e1fe33c687e6356a6a43e1000163e90c1e3d2daa463",
+    "line_count": 12,
+    "token_estimate": 109
+  },
+  "src/context_auditor/normalizers/__init__.py": {
+    "mtime": 1788619242.6794405,
+    "size": 545,
+    "sha256": "acfc729abb072651096a78e76157a9e0245c94d8415282bdf80dce85e577e477",
+    "line_count": 14,
+    "token_estimate": 136
+  },
+  "src/core/.context.yaml": {
+    "mtime": 1792617299.6206057,
+    "size": 335,
+    "sha256": "b5c17bc80c50eb07c800a5ab3d10ab3b405c34fa304b454683a29f8be22678ba",
+    "line_count": 10,
+    "token_estimate": 83
+  },
+  "src/dashboards/.context.yaml": {
+    "mtime": 1792617299.6226017,
+    "size": 351,
+    "sha256": "63e306c0a400ce596c3070b7ff50426fdd4ce10cde4a366a229498d83ac2855b",
+    "line_count": 10,
+    "token_estimate": 87
+  },
+  "src/data_generation/.context.yaml": {
+    "mtime": 1792617299.6196084,
+    "size": 365,
+    "sha256": "838d98d07f792fc3c9b9e312d95db8476eb43b27f2b2a57b219a44b5a39f8da1",
+    "line_count": 10,
+    "token_estimate": 91
+  },
+  "tests/.context.yaml": {
+    "mtime": 1792617299.6451473,
+    "size": 318,
+    "sha256": "354bc92d9959c48d535467e7bde621770a6b9ee0e7876e30f57fdf749beba932",
+    "line_count": 10,
+    "token_estimate": 79
+  },
+  "tests/e2e/test_cli.py": {
+    "mtime": 1792672689.162779,
+    "size": 2637,
+    "sha256": "228788cf2a444e908b6ca62aedd6081c9e109d37dfe952e88c35215fca0a2fea",
+    "line_count": 82,
+    "token_estimate": 659
+  },
+  "tests/unit/test_antigravity_adapter.py": {
+    "mtime": 1792672608.500147,
+    "size": 8878,
+    "sha256": "61b34732a3a0029cb87866cd0cc7d07e26ce3249f7dd4f9b55b1acf88b18730f",
+    "line_count": 265,
+    "token_estimate": 2219
+  },
+  "tests/unit/test_compactor.py": {
+    "mtime": 1792672513.163605,
+    "size": 5186,
+    "sha256": "3d1f0f114fba0c088f7b019a4f63732ad9e4a377840af2f6adfa07e9a951a0b7",
+    "line_count": 118,
+    "token_estimate": 1296
+  },
+  "tests/unit/test_interactive_session.py": {
+    "mtime": 1792672454.552837,
+    "size": 3387,
+    "sha256": "62f1a91708fce97b41ac8fc9f71476eba6a16be4b5af98c4078de6c2b6dd4f24",
+    "line_count": 89,
+    "token_estimate": 846
+  },
+  "tests/unit/test_local_endpoint_adapter.py": {
+    "mtime": 1792672621.5617688,
+    "size": 4301,
+    "sha256": "4fcf163d5719fb855c258899b79d1704fdc55aef204eaeea13ad5fd22ce890be",
+    "line_count": 140,
+    "token_estimate": 1075
+  },
+  "tests/unit/test_normalizers.py": {
+    "mtime": 1788619251.806082,
+    "size": 734,
+    "sha256": "c2bdb8c010b31badfe85812a0ac417b5eca500d4ac122337669d4528c118ec4d",
+    "line_count": 23,
+    "token_estimate": 183
+  },
+  "tests/unit/test_policies.py": {
+    "mtime": 1792672444.3700092,
+    "size": 2565,
+    "sha256": "76996bf4c0e39e77a79f7e909bcb2f8ef78ee1dfafb6408c799fb98e28f7f7c2",
+    "line_count": 63,
+    "token_estimate": 641
+  },
+  "tests/unit/test_scoring.py": {
+    "mtime": 1792672341.5521605,
+    "size": 7752,
+    "sha256": "c752ed895b8754e2af84a76d6f15b5ed3ccd463cce5d66f884c9ccc46322fb9d",
+    "line_count": 229,
+    "token_estimate": 1938
+  },
+  "tests/unit/test_signals.py": {
+    "mtime": 1792672055.5247655,
+    "size": 8238,
+    "sha256": "b719b6f49c5af49b5b2ba119f5b10844f5ef55157beadd74f9011a1600a9d395",
+    "line_count": 206,
+    "token_estimate": 2059
+  },
+  "tests/unit/test_validators.py": {
+    "mtime": 1792672265.026554,
+    "size": 4771,
+    "sha256": "0224fd82726c219e19242ec3e2243b9734c40f8df8d131106841181666f5d2c7",
+    "line_count": 154,
+    "token_estimate": 1192
+  },
+  "Tools/.context.yaml": {
+    "mtime": 1792617299.646144,
+    "size": 288,
+    "sha256": "1455a9b11cc6d41886da887ffc83d06a3742043bbd7725549b14ad3c888a0951",
+    "line_count": 10,
+    "token_estimate": 72
+  }
+}

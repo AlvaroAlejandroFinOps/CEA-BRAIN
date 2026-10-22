@@ -57,6 +57,7 @@ class BenchmarkSession:
         self.tool_events: List[Dict[str, Any]] = []
         self.timeline: List[Dict[str, Any]] = []
         self.token_telemetry: List[Dict[str, Any]] = []
+        self.last_prefix_hash: Optional[str] = None
         
         self.logs_dir = Path("logs") / "benchmarks" / self.session_id
         self.logs_dir.mkdir(parents=True, exist_ok=True)
@@ -126,6 +127,10 @@ class BenchmarkSession:
         self.save_snapshot()
 
     def build_audit_input(self) -> AuditInput:
+        telemetry = {}
+        if self.last_prefix_hash:
+            telemetry["previous_prefix_hash"] = self.last_prefix_hash
+
         return AuditInput(
             messages=[
                 Message(id=m["id"], role=Role(m["role"]), content=m["content"])
@@ -138,8 +143,15 @@ class BenchmarkSession:
             tool_events=[
                 ToolEvent(id=t["id"], tool_name=t["tool_name"], parameters=t["parameters"], result=t["result"])
                 for t in self.tool_events
-            ]
+            ],
+            runtime_telemetry=telemetry
         )
+
+    def _atomic_write_text(self, target_path: Path, content: str) -> None:
+        """Writes content to a temporary file and atomically replaces the target path."""
+        tmp_path = target_path.with_suffix(target_path.suffix + ".tmp")
+        tmp_path.write_text(content, encoding="utf-8")
+        os.replace(str(tmp_path), str(target_path))
 
     def save_snapshot(self):
         # 1. session_meta.json
@@ -156,7 +168,7 @@ class BenchmarkSession:
             "documents_count": len(self.documents),
             "tool_events_count": len(self.tool_events)
         }
-        (self.logs_dir / "session_meta.json").write_text(json.dumps(meta, indent=2, ensure_ascii=False), encoding="utf-8")
+        self._atomic_write_text(self.logs_dir / "session_meta.json", json.dumps(meta, indent=2, ensure_ascii=False))
 
         # 2. conversation.json
         conv_payload = {
@@ -164,10 +176,10 @@ class BenchmarkSession:
             "documents": self.documents,
             "tool_events": self.tool_events
         }
-        (self.logs_dir / "conversation.json").write_text(json.dumps(conv_payload, indent=2, ensure_ascii=False), encoding="utf-8")
+        self._atomic_write_text(self.logs_dir / "conversation.json", json.dumps(conv_payload, indent=2, ensure_ascii=False))
 
         # 3. timeline.json
-        (self.logs_dir / "timeline.json").write_text(json.dumps(self.timeline, indent=2, ensure_ascii=False), encoding="utf-8")
+        self._atomic_write_text(self.logs_dir / "timeline.json", json.dumps(self.timeline, indent=2, ensure_ascii=False))
 
         # 4. summary_report.md
         self._write_markdown_summary()
@@ -200,7 +212,7 @@ class BenchmarkSession:
             "---",
             f"> *Archivo de benchmark guardado en `{self.logs_dir}`.*"
         ])
-        (self.logs_dir / "summary_report.md").write_text("\n".join(lines), encoding="utf-8")
+        self._atomic_write_text(self.logs_dir / "summary_report.md", "\n".join(lines))
 
 
 # --- Interactive CLI Application ---
@@ -515,7 +527,7 @@ class InteractiveAuditorCLI:
             print(f"\n  {Colors.BOLD}Hallazgos Prioritarios:{Colors.RESET}")
             for f in result.findings:
                 print(f"  - [{f.dimension.upper()} - {f.epistemic_status}]: {f.explanation}")
-                if f.remediation:
+                if getattr(f, "remediation", None):
                     print(f"    {Colors.CYAN}Acción:{Colors.RESET} {f.remediation}")
         print(f"============================================================\n")
 
