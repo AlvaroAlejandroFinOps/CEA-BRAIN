@@ -3,8 +3,8 @@
   "version": "3.0",
   "project": "Context Entropy Auditor (CEA)",
   "architecture": "Gravity HyperScale Thinking",
-  "updated_at": "2026-10-21T17:50:29.428033+00:00",
-  "timestamp": 1792605029.4260395,
+  "updated_at": "2026-10-21T21:15:00.140052+00:00",
+  "timestamp": 1792617300.1380594,
   "bootloader": {"tier_1": ["AGENTS.md", ".context/tree.json", "[target_folder]/.context.yaml"], "tier_2": ["AGENTS.md", ".context/tree.json", "01_seed/seed-context-entropy-auditor-master.md", "[target_folder]/.context.yaml"]},
   "nodes": {
     "01_seed": {"role": "dna", "prio": "p0", "crawl": true, "seed_ref": "required", "tier1_preload": false, "key_files": ["seed-context-entropy-auditor-master.md"]},
